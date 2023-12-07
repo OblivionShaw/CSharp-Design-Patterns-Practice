@@ -51,7 +51,7 @@ namespace DesignPatterns
 
             //調用 Square 的 Draw 方法
             MessageBox.Show(shape3.Draw());
-            
+
 
             //獲取顏色工廠
             AbstractFactoryPatternAbstractFactory colorFactory = AbstractFactoryPatternFactoryProducer.GetFactory("COLOR");
@@ -76,6 +76,14 @@ namespace DesignPatterns
             MessageBox.Show(color3.Fill());
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Singleton1.GetInstance().ShowMessage());
+            MessageBox.Show(Singleton2.GetSingleton().ShowMessage());
+            MessageBox.Show(Singleton3.GetInstance().ShowMessage());
+            MessageBox.Show(Singleton4.Instance.ShowMessage());
         }
     }
 }
