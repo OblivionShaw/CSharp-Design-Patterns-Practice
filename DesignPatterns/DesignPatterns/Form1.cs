@@ -85,5 +85,19 @@ namespace DesignPatterns
             MessageBox.Show(Singleton3.GetInstance().ShowMessage());
             MessageBox.Show(Singleton4.Instance.ShowMessage());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BuilderPatternMealBuilder mealBuilder = new BuilderPatternMealBuilder();
+
+            BuilderPatternMeal vegMeal = mealBuilder.prepareVegMeal();
+            string vegMealItems = "Veg Meal\n" + vegMeal.showItems() + "Total Cost: " + vegMeal.getCost() + "\n";
+
+            BuilderPatternMeal nonVegMeal = mealBuilder.prepareNonVegMeal();
+            string nonVegMealItems = "\nNon-Veg Meal\n" + nonVegMeal.showItems() + "Total Cost: " + nonVegMeal.getCost() + "\n";
+
+            MessageBox.Show(vegMealItems + nonVegMealItems);
+        }
+
     }
 }
