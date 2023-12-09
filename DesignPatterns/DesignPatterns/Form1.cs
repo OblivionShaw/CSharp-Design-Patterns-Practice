@@ -99,5 +99,18 @@ namespace DesignPatterns
             MessageBox.Show(vegMealItems + nonVegMealItems);
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PrototypePatternShapeCache.LoadCache();
+
+            PrototypePatternShape clonedShape = (PrototypePatternShape)PrototypePatternShapeCache.GetShape("1");
+            MessageBox.Show("Shape : " + clonedShape.GetType());
+
+            PrototypePatternShape clonedShape2 = (PrototypePatternShape)PrototypePatternShapeCache.GetShape("2");
+            MessageBox.Show("Shape : " + clonedShape2.GetType());
+
+            PrototypePatternShape clonedShape3 = (PrototypePatternShape)PrototypePatternShapeCache.GetShape("3");
+            MessageBox.Show("Shape : " + clonedShape3.GetType());
+        }
     }
 }
