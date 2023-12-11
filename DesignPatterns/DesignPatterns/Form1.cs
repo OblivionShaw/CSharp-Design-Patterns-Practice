@@ -112,5 +112,14 @@ namespace DesignPatterns
             PrototypePatternShape clonedShape3 = (PrototypePatternShape)PrototypePatternShapeCache.GetShape("3");
             MessageBox.Show("Shape : " + clonedShape3.GetType());
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdapterPatternAudioPlayer audioPlayer = new AdapterPatternAudioPlayer();
+            MessageBox.Show(audioPlayer.Play("mp3", "beyond the horizon.mp3"));
+            MessageBox.Show(audioPlayer.Play("mp4", "alone.mp4"));
+            MessageBox.Show(audioPlayer.Play("vlc", "far far away.vlc"));
+            MessageBox.Show(audioPlayer.Play("avi", "mind me.avi"));
+        }
     }
 }
