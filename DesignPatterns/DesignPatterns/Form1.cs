@@ -121,5 +121,15 @@ namespace DesignPatterns
             MessageBox.Show(audioPlayer.Play("vlc", "far far away.vlc"));
             MessageBox.Show(audioPlayer.Play("avi", "mind me.avi"));
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            BridgeShape redCircle = new BridgeCircle(100, 100, 10, new BridgeRedCircle());
+            BridgeShape greenCircle = new BridgeCircle(100, 100, 10, new BridgeGreenCircle());
+
+            MessageBox.Show(redCircle.Draw());
+            MessageBox.Show(greenCircle.Draw());
+        }
     }
 }
