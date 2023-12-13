@@ -131,5 +131,46 @@ namespace DesignPatterns
             MessageBox.Show(redCircle.Draw());
             MessageBox.Show(greenCircle.Draw());
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            List<FilterPatternPerson> persons = new List<FilterPatternPerson>();
+
+            persons.Add(new FilterPatternPerson("Robert", "Male", "Single"));
+            persons.Add(new FilterPatternPerson("John", "Male", "Married"));
+            persons.Add(new FilterPatternPerson("Laura", "Female", "Married"));
+            persons.Add(new FilterPatternPerson("Diana", "Female", "Single"));
+            persons.Add(new FilterPatternPerson("Mike", "Male", "Single"));
+            persons.Add(new FilterPatternPerson("Bobby", "Male", "Single"));
+
+            FilterPatternCriteria male = new FilterPatternCriteriaMale();
+            FilterPatternCriteria female = new FilterPatternCriteriaFemale();
+            FilterPatternCriteria single = new FilterPatternCriteriaSingle();
+            FilterPatternCriteria singleMale = new FilterPatternAndCriteria(single, male);
+            FilterPatternCriteria singleOrFemale = new FilterPatternOrCriteria(single, female);
+
+            MessageBox.Show("Males: ");
+            PrintPersons(male.MeetCriteria(persons));
+
+            MessageBox.Show("\nFemales: ");
+            PrintPersons(female.MeetCriteria(persons));
+
+            MessageBox.Show("\nSingle Males: ");
+            PrintPersons(singleMale.MeetCriteria(persons));
+
+            MessageBox.Show("\nSingle Or Females: ");
+            PrintPersons(singleOrFemale.MeetCriteria(persons));
+        }
+
+        public void PrintPersons(List<FilterPatternPerson> persons)
+        {
+            foreach (var person in persons)
+            {
+                MessageBox.Show("Person : [ Name : " + person.GetName()
+                    + ", Gender : " + person.GetGender()
+                    + ", Marital Status : " + person.GetMaritalStatus()
+                    + " ]");
+            }
+        }
     }
 }
