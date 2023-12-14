@@ -172,5 +172,40 @@ namespace DesignPatterns
                     + " ]");
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            CompositePatternEmployee CEO = new CompositePatternEmployee("John", "CEO", 30000);
+
+            CompositePatternEmployee headSales = new CompositePatternEmployee("Robert", "Head Sales", 20000);
+
+            CompositePatternEmployee headMarketing = new CompositePatternEmployee("Michel", "Head Marketing", 20000);
+
+            CompositePatternEmployee clerk1 = new CompositePatternEmployee("Laura", "Marketing", 10000);
+            CompositePatternEmployee clerk2 = new CompositePatternEmployee("Bob", "Marketing", 10000);
+
+            CompositePatternEmployee salesExecutive1 = new CompositePatternEmployee("Richard", "Sales", 10000);
+            CompositePatternEmployee salesExecutive2 = new CompositePatternEmployee("Rob", "Sales", 10000);
+
+            CEO.Add(headSales);
+            CEO.Add(headMarketing);
+
+            headSales.Add(salesExecutive1);
+            headSales.Add(salesExecutive2);
+
+            headMarketing.Add(clerk1);
+            headMarketing.Add(clerk2);
+
+            // Print all employees of the organization
+            MessageBox.Show(CEO.ToString());
+            foreach (CompositePatternEmployee headEmployee in CEO.GetSubordinates())
+            {
+                MessageBox.Show(headEmployee.ToString());
+                foreach (CompositePatternEmployee employee in headEmployee.GetSubordinates())
+                {
+                    MessageBox.Show(employee.ToString());
+                }
+            }
+        }
     }
 }
