@@ -207,5 +207,25 @@ namespace DesignPatterns
                 }
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            DecoratorPatternShape circle = new DecoratorPatternCircle();
+            DecoratorPatternShapeDecorator redCircle = new DecoratorPatternRedShapeDecorator(new DecoratorPatternCircle());
+            DecoratorPatternShapeDecorator redRectangle = new DecoratorPatternRedShapeDecorator(new DecoratorPatternRectangle());
+
+            string result = "";
+
+            result += "Circle with normal border\n";
+            result += circle.Draw();
+
+            result += "\n\nCircle of red border\n";
+            result += redCircle.Draw();
+
+            result += "\n\nRectangle of red border\n";
+            result += redRectangle.Draw();
+
+            MessageBox.Show(result);
+        }
     }
 }
