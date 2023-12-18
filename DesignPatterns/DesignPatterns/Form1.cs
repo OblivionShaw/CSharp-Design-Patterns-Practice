@@ -227,5 +227,89 @@ namespace DesignPatterns
 
             MessageBox.Show(result);
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            ObserverPatternSubject subject = new ObserverPatternSubject();
+
+            ObserverPatternHexaObserver hexa = new ObserverPatternHexaObserver(subject);
+            ObserverPatternOctalObserver octal = new ObserverPatternOctalObserver(subject);
+            ObserverPatternBinaryObserver binary = new ObserverPatternBinaryObserver(subject);
+
+            string result = "";
+            result += "First state change: 15\n";
+            subject.SetState(15);
+            result += hexa.Update() + "\n";
+            result += octal.Update() + "\n";
+            result += binary.Update() + "\n";
+
+            result += "Second state change: 10\n";
+            subject.SetState(10);
+            result += hexa.Update() + "\n";
+            result += octal.Update() + "\n";
+            result += binary.Update() + "\n";
+
+            MessageBox.Show(result);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }

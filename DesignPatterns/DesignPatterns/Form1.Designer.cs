@@ -38,6 +38,19 @@
             button8 = new Button();
             button9 = new Button();
             button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
+            button13 = new Button();
+            button14 = new Button();
+            button15 = new Button();
+            button16 = new Button();
+            button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
+            button21 = new Button();
+            button22 = new Button();
+            button23 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -136,15 +149,158 @@
             button10.Name = "button10";
             button10.Size = new Size(120, 80);
             button10.TabIndex = 9;
-            button10.Text = "裝飾器模式DecoratorPattern";
+            button10.Text = "10.裝飾器模式DecoratorPattern";
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(53, 244);
+            button11.Name = "button11";
+            button11.Size = new Size(120, 80);
+            button11.TabIndex = 10;
+            button11.Text = "11";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(195, 244);
+            button12.Name = "button12";
+            button12.Size = new Size(120, 80);
+            button12.TabIndex = 11;
+            button12.Text = "12";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // button13
+            // 
+            button13.Location = new Point(333, 244);
+            button13.Name = "button13";
+            button13.Size = new Size(120, 80);
+            button13.TabIndex = 12;
+            button13.Text = "13";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
+            // 
+            // button14
+            // 
+            button14.Location = new Point(485, 244);
+            button14.Name = "button14";
+            button14.Size = new Size(120, 80);
+            button14.TabIndex = 13;
+            button14.Text = "14";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(634, 244);
+            button15.Name = "button15";
+            button15.Size = new Size(120, 80);
+            button15.TabIndex = 14;
+            button15.Text = "15";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // button16
+            // 
+            button16.Location = new Point(53, 330);
+            button16.Name = "button16";
+            button16.Size = new Size(120, 80);
+            button16.TabIndex = 15;
+            button16.Text = "16";
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
+            // 
+            // button17
+            // 
+            button17.Location = new Point(195, 330);
+            button17.Name = "button17";
+            button17.Size = new Size(120, 80);
+            button17.TabIndex = 16;
+            button17.Text = "17";
+            button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
+            // 
+            // button18
+            // 
+            button18.Location = new Point(333, 330);
+            button18.Name = "button18";
+            button18.Size = new Size(120, 80);
+            button18.TabIndex = 17;
+            button18.Text = "18";
+            button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
+            // 
+            // button19
+            // 
+            button19.Location = new Point(485, 330);
+            button19.Name = "button19";
+            button19.Size = new Size(120, 80);
+            button19.TabIndex = 18;
+            button19.Text = "19";
+            button19.UseVisualStyleBackColor = true;
+            button19.Click += button19_Click;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(634, 330);
+            button20.Name = "button20";
+            button20.Size = new Size(120, 80);
+            button20.TabIndex = 19;
+            button20.Text = "20.觀察者模式ObserverPattern";
+            button20.UseVisualStyleBackColor = true;
+            button20.Click += button20_Click;
+            // 
+            // button21
+            // 
+            button21.Location = new Point(53, 427);
+            button21.Name = "button21";
+            button21.Size = new Size(120, 80);
+            button21.TabIndex = 20;
+            button21.Text = "21";
+            button21.UseVisualStyleBackColor = true;
+            button21.Click += button21_Click;
+            // 
+            // button22
+            // 
+            button22.Location = new Point(195, 427);
+            button22.Name = "button22";
+            button22.Size = new Size(120, 80);
+            button22.TabIndex = 21;
+            button22.Text = "22";
+            button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
+            // 
+            // button23
+            // 
+            button23.Location = new Point(333, 427);
+            button23.Name = "button23";
+            button23.Size = new Size(120, 80);
+            button23.TabIndex = 22;
+            button23.Text = "23.策略模式StrategyPattern";
+            button23.UseVisualStyleBackColor = true;
+            button23.Click += button23_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(814, 631);
+            Controls.Add(button23);
+            Controls.Add(button22);
+            Controls.Add(button21);
+            Controls.Add(button20);
+            Controls.Add(button19);
+            Controls.Add(button18);
+            Controls.Add(button17);
+            Controls.Add(button16);
+            Controls.Add(button15);
+            Controls.Add(button14);
+            Controls.Add(button13);
+            Controls.Add(button12);
+            Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -172,5 +328,18 @@
         private Button button8;
         private Button button9;
         private Button button10;
+        private Button button11;
+        private Button button12;
+        private Button button13;
+        private Button button14;
+        private Button button15;
+        private Button button16;
+        private Button button17;
+        private Button button18;
+        private Button button19;
+        private Button button20;
+        private Button button21;
+        private Button button22;
+        private Button button23;
     }
 }
