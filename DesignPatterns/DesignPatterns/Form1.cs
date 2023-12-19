@@ -1,3 +1,5 @@
+using System;
+
 namespace DesignPatterns
 {
     public partial class Form1 : Form
@@ -309,7 +311,14 @@ namespace DesignPatterns
 
         private void button23_Click(object sender, EventArgs e)
         {
-            //
+            StrategyPatternContext context = new StrategyPatternContext(new StrategyPatternOperationAdd());
+            MessageBox.Show("10 + 5 = " + context.ExecuteStrategy(10, 5));
+
+            context = new StrategyPatternContext(new StrategyPatternOperationSubtract());
+            MessageBox.Show("10 - 5 = " + context.ExecuteStrategy(10, 5));
+
+            context = new StrategyPatternContext(new StrategyPatternOperationMultiply());
+            MessageBox.Show("10 * 5 = " + context.ExecuteStrategy(10, 5));
         }
     }
 }
